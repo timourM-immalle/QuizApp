@@ -5,7 +5,7 @@ Uitbreidingen:
 - Refactor de applicatie zodat de `Main`-method wat wordt opgekuist.
   Maak hiervoor een class `VragenLijst` met de methods `VoegVraagToe(...)` en `PrintRapport()`. Gebruik een method `Start` om de vragenlijst te starten.
   (Later kunnen we hiermee verschillende vragenlijsten maken waaruit de speler dan eventueel in het begin uit kan kiezen.)
-- Maak een class `TijdVraag` die overerft van `Vraag` en bijhoudt hoe lang het duurt eer er een antwoord werd gegeven.
+- Maak een class `TijdVraag` die overerft van `Vraag` en bijhoudt (en weergeeft in het rpt) hoe lang het duurt eer er een antwoord werd gegeven.
   (HINT: Gebruik voor en na de invoer van de gebruiker de `DateTime.Now`-property en bereken het verschil (van type `TimeSpan`).)
   Hoe structureren we de verschillende classes om deze tijden op het einde weer te geven en toch overerving (polymorfie) te laten werken?
   (HINT: Misschien is het beter om de rapportering van de vraag aan `Vraag` zelf over te laten? Bij het rapporteren moeten we nu immers ook de tijd weergeven!)
