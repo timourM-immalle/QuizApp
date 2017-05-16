@@ -12,8 +12,8 @@ namespace QuizApp
         {
             Vragenlijst vragenlijst = new Vragenlijst();
 
-            vragenlijst.VoegVraagToe(new Vraag { Inhoud = "Hoeveel is 1 + 1?", CorrectAntwoord = "2" });
-            vragenlijst.VoegVraagToe(new Vraag { Inhoud = "Hoeveel is 2 * 3?", CorrectAntwoord = "6" });
+            vragenlijst.VoegVraagToe(new Tijdvraag { Inhoud = "Hoeveel is 1 + 1?", CorrectAntwoord = "2" });
+            vragenlijst.VoegVraagToe(new Tijdvraag { Inhoud = "Hoeveel is 2 * 3?", CorrectAntwoord = "6" });
 
             vragenlijst.Start();
             vragenlijst.PrintRapport();
