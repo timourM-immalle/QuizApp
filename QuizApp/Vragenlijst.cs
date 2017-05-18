@@ -40,7 +40,7 @@ namespace QuizApp
             //        Console.ForegroundColor = ConsoleColor.Green;
             //        Console.Write(vraag.Inhoud);
             //        Console.WriteLine("\t\tCorrect!");
-                    
+
             //    }
             //    else
             //    {
@@ -54,7 +54,18 @@ namespace QuizApp
 
             //Console.ResetColor();
 
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine("Rapport");
+            Console.WriteLine("-------");
+            Console.WriteLine();
 
+            foreach (var vraag in vragen)
+            {
+                //vraag.PrintRapportLijn();
+            }
+
+            Console.ResetColor();
         }
     }
 }

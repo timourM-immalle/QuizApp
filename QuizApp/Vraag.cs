@@ -32,5 +32,10 @@ namespace QuizApp
             }
             return false;
         }
+
+        public virtual void PrintRapportLijn()
+        {
+            string fmt = "{0, -40} {1,20}";
+        }
     }
 }
