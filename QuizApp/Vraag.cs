@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuizApp
 {
-    class Vraag //deze klasse encapsuleert Inhoud en CorrectAntwoord en gegevenAntwoord; dat houdt de klasse ook bij
+    class Vraag //( : object) //deze klasse encapsuleert Inhoud en CorrectAntwoord en gegevenAntwoord; dat houdt de klasse ook bij
     {
         private string gegevenAntwoord;
 

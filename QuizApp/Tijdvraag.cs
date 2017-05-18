@@ -12,7 +12,7 @@ namespace QuizApp
 
         public override void StelVraag()
         {
-            var huidigeTijd = DateTime.Now;
+            DateTime huidigeTijd = DateTime.Now;
 
             base.StelVraag();
             antwoordtijd = DateTime.Now.Second - huidigeTijd.Second;

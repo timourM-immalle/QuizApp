@@ -10,7 +10,7 @@ namespace QuizApp
     {
         private Random rnd = new Random();
 
-        public int WillekeurigeVraag //Welk type?
+        public Random WillekeurigeVraag
         {
             get; set;
         }
