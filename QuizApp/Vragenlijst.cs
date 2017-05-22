@@ -33,39 +33,39 @@ namespace QuizApp
 
         public void PrintRapport()
         {
-            //foreach (var vraag in vragen)
-            //{
-            //    if (vraag.Check())
-            //    {
-            //        Console.ForegroundColor = ConsoleColor.Green;
-            //        Console.Write(vraag.Inhoud);
-            //        Console.WriteLine("\t\tCorrect!");
-
-            //    }
-            //    else
-            //    {
-            //        Console.ForegroundColor = ConsoleColor.Red;
-            //        Console.Write(vraag.Inhoud);
-            //        Console.WriteLine("\t\tFout: [{0}]", vraag.CorrectAntwoord);
-            //    }
-
-            //    Console.WriteLine(vraag.Antwoordtijd + " s");
-            //}
-
-            //Console.ResetColor();
-
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Rapport");
-            Console.WriteLine("-------");
-            Console.WriteLine();
-
             foreach (var vraag in vragen)
             {
-                //vraag.PrintRapportLijn();
+                if (vraag.Check())
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(vraag.Inhoud);
+                    Console.WriteLine("\t\tCorrect!");
+
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write(vraag.Inhoud);
+                    Console.WriteLine("\t\tFout: [{0}]", vraag.CorrectAntwoord);
+                }
+
+                Console.WriteLine(vraag.Antwoordtijd + " s");
             }
 
             Console.ResetColor();
+
+            //Console.WriteLine();
+            //Console.ForegroundColor = ConsoleColor.DarkGreen;
+            //Console.WriteLine("Rapport");
+            //Console.WriteLine("-------");
+            //Console.WriteLine();
+
+            //foreach (var vraag in vragen)
+            //{
+            //    //vraag.PrintRapportLijn();
+            //}
+
+            //Console.ResetColor();
         }
     }
 }
