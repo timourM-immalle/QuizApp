@@ -18,11 +18,11 @@ namespace QuizApp
 
         public override void StelVraag()
         {
+            int randomgetal;
             int maxAantalAntwoorden = 1; //is 1 + #antwoorden; om in rnd te gebruiken
             int alfabetindex = 0;
             int antwoordindex = 0;
-            int randomgetal;
-            List<int> gebruikteRandomgetallen = new List<int>();
+            char[] gebruikteRandomgetallen = "".ToCharArray();
             int aantalGebruikteAntwoorden = 0;
 
             Console.ForegroundColor = ConsoleColor.Green;
@@ -39,9 +39,10 @@ namespace QuizApp
 
             for (int i = 0; i <= antwoordindex; i++) //als alle mogelijkheden klaar zijn: break;    //als een getal al random 'gedraaid' is, geen rnd-mogelijkheid meer
             {
+                List<string> gebruikteRandomgetallenToevoegen = new List<string>();
                 randomgetal = rnd.Next(maxAantalAntwoorden);
 
-                if (aantalGebruikteAntwoorden < maxAantalAntwoorden - 1 && randomgetal != gebruikteRandomgetallen/*eender Welk get. in gebruikteRandomgetallen*/)
+                if (aantalGebruikteAntwoorden < maxAantalAntwoorden - 1 && randomgetal != Convert.ToInt32(gebruikteRandomgetallen)/*eender Welk get. in gebruikteRandomgetallen*/)
                 {
                     Console.WriteLine(mogelijkAntwoord[rnd.Next(maxAantalAntwoorden)]);
                 }
@@ -50,7 +51,9 @@ namespace QuizApp
                     continue; //vs break;
                 }
 
-                gebruikteRandomgetallen.Add(randomgetal);
+                gebruikteRandomgetallenToevoegen.Add(randomgetal.ToString())
+                gebruikteRandomgetallen[//op de xe plaats ...toeveoegn]
+                    
                 aantalGebruikteAntwoorden++;
             }
             
